@@ -239,7 +239,7 @@
 <symbol name="IMU">
 <pin name="VDDIO" x="-5.08" y="7.62" length="short" rot="R90"/>
 <pin name="VDD" x="-2.54" y="7.62" length="short" rot="R90"/>
-<pin name="GND1" x="5.08" y="7.62" length="short" rot="R90"/>
+<pin name="GND" x="5.08" y="7.62" length="short" rot="R90"/>
 <pin name="SDO/SA0" x="7.62" y="0" length="short"/>
 <pin name="SDX" x="-7.62" y="0" length="short" rot="R180"/>
 <pin name="SCX" x="-7.62" y="2.54" length="short" rot="R180"/>
@@ -319,7 +319,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="LSM6DS0">
+<deviceset name="LSM6DS0_IMU" prefix="U">
 <gates>
 <gate name="G$1" symbol="IMU" x="0" y="0"/>
 </gates>
@@ -327,7 +327,7 @@
 <device name="-LSM6DSOXTR" package="IMU">
 <connects>
 <connect gate="G$1" pin="CS" pad="12"/>
-<connect gate="G$1" pin="GND1" pad="6 7"/>
+<connect gate="G$1" pin="GND" pad="6 7"/>
 <connect gate="G$1" pin="INT1" pad="4"/>
 <connect gate="G$1" pin="INT2" pad="9"/>
 <connect gate="G$1" pin="OCS_AUX" pad="10"/>
