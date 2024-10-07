@@ -73,7 +73,7 @@
 </layers>
 <library>
 <packages>
-<package name="RC0805">
+<package name="RES">
 <wire x1="-1" y1="0.625" x2="-1" y2="-0.625" width="0.05" layer="51"/>
 <wire x1="-1" y1="-0.625" x2="1" y2="-0.625" width="0.05" layer="51"/>
 <wire x1="1" y1="-0.625" x2="1" y2="0.625" width="0.05" layer="51"/>
@@ -139,7 +139,7 @@
 <rectangle x1="-1.2295" y1="-1.3465" x2="-0.6705" y2="-0.6225" layer="31"/>
 <rectangle x1="0.6705" y1="-1.3465" x2="1.2295" y2="-0.6225" layer="31"/>
 </package>
-<package name="IMU">
+<package name="LSM6DS0_IMU">
 <rectangle x1="-1.5" y1="-1.25" x2="1.5" y2="1.25" layer="43"/>
 <rectangle x1="-1.5" y1="-1.25" x2="1.5" y2="1.25" layer="42"/>
 <circle x="-1.87458125" y="0.762209375" radius="0.0187375" width="0.2" layer="21"/>
@@ -174,7 +174,7 @@
 </package>
 </packages>
 <symbols>
-<symbol name="RESISTOR">
+<symbol name="RES">
 <pin name="1" x="-7.62" y="0" length="short"/>
 <pin name="2" x="5.08" y="0" length="short" rot="R180"/>
 <wire x1="-5.08" y1="0" x2="-4.445" y2="1.27" width="0.254" layer="94"/>
@@ -236,7 +236,7 @@
 <wire x1="-5.08" y1="-2.54" x2="-1.27" y2="-2.54" width="0.254" layer="94"/>
 <text x="0" y="10.16" size="0.9" layer="95" font="vector" align="center">&gt;NAME</text>
 </symbol>
-<symbol name="IMU">
+<symbol name="LSM6DS0_IMU">
 <pin name="VDDIO" x="-5.08" y="7.62" length="short" rot="R90"/>
 <pin name="VDD" x="-2.54" y="7.62" length="short" rot="R90"/>
 <pin name="GND" x="5.08" y="7.62" length="short" rot="R90"/>
@@ -260,10 +260,10 @@
 <devicesets>
 <deviceset name="RES" prefix="R" uservalue="yes">
 <gates>
-<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+<gate name="G$1" symbol="RES" x="0" y="0"/>
 </gates>
 <devices>
-<device name="-0805-OOHM" package="RC0805">
+<device name="-0805-OOHM" package="RES">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -321,10 +321,10 @@
 </deviceset>
 <deviceset name="LSM6DS0_IMU" prefix="U">
 <gates>
-<gate name="G$1" symbol="IMU" x="0" y="0"/>
+<gate name="G$1" symbol="LSM6DS0_IMU" x="0" y="0"/>
 </gates>
 <devices>
-<device name="-LSM6DSOXTR" package="IMU">
+<device name="-LSM6DSOXTR" package="LSM6DS0_IMU">
 <connects>
 <connect gate="G$1" pin="CS" pad="12"/>
 <connect gate="G$1" pin="GND" pad="6 7"/>
