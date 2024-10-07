@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -239,8 +239,7 @@
 <symbol name="IMU">
 <pin name="VDDIO" x="-5.08" y="7.62" length="short" rot="R90"/>
 <pin name="VDD" x="-2.54" y="7.62" length="short" rot="R90"/>
-<pin name="GND1" x="2.54" y="7.62" length="short" rot="R90"/>
-<pin name="GND2" x="5.08" y="7.62" length="short" rot="R90"/>
+<pin name="GND1" x="5.08" y="7.62" length="short" rot="R90"/>
 <pin name="SDO/SA0" x="7.62" y="0" length="short"/>
 <pin name="SDX" x="-7.62" y="0" length="short" rot="R180"/>
 <pin name="SCX" x="-7.62" y="2.54" length="short" rot="R180"/>
@@ -259,7 +258,7 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="RESISTOR" prefix="R" uservalue="yes">
+<deviceset name="RES" prefix="R" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
 </gates>
@@ -320,7 +319,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="LSM6DSOXTR_IMU">
+<deviceset name="LSM6DS0">
 <gates>
 <gate name="G$1" symbol="IMU" x="0" y="0"/>
 </gates>
@@ -328,8 +327,7 @@
 <device name="-LSM6DSOXTR" package="IMU">
 <connects>
 <connect gate="G$1" pin="CS" pad="12"/>
-<connect gate="G$1" pin="GND1" pad="6"/>
-<connect gate="G$1" pin="GND2" pad="7"/>
+<connect gate="G$1" pin="GND1" pad="6 7"/>
 <connect gate="G$1" pin="INT1" pad="4"/>
 <connect gate="G$1" pin="INT2" pad="9"/>
 <connect gate="G$1" pin="OCS_AUX" pad="10"/>
